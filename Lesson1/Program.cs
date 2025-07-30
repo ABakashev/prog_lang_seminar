@@ -14,7 +14,7 @@ if (num1 == num2 * num2)
 else
 {
     Console.WriteLine("It is false");
-}*/
+}
 
 Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
@@ -25,4 +25,19 @@ while (negNum <= num)
 {
     Console.Write(negNum + " ");
     negNum++;
+}*/
+
+//Программа принимает на вход трех значное число и на выходе показывает сумму первой и третьей цифры этого числа
+Console.WriteLine("Введите трехзначное число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num > 99 || num < 1000)
+{
+    int firstDigit = num / 100;
+    int lastDigit = num % 10;
+    Console.WriteLine("Сумма первой и третьей цифры числа: " + (firstDigit + lastDigit));
+}
+else
+{
+    Console.WriteLine("Вы ввели не трехзначное число");
 }
